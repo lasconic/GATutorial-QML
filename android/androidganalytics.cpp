@@ -47,5 +47,5 @@ void AndroidGoogleAnalytics::sendEvent(const QString &category, const QString &a
     QAndroidJniObject::callStaticMethod<void>("com/lasconic/QGoogleAnalytics",
                                        "sendEvent",
                                        "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V",
-                                       jsCategory.object<jstring>(), jsAction.object<jstring>(), jsLabel.object<jstring>(), jsCategory.object<jstring>(), (jlong)value);
+                                       jsCategory.object<jstring>(), jsAction.object<jstring>(), jsLabel.object<jstring>(), (jlong)value);
 }
